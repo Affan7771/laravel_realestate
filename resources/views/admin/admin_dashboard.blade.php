@@ -37,6 +37,10 @@
 
     <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.png') }}" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+
+    <!-- Datatable style -->
+    <link rel="stylesheet" href="{{ asset('backend/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.css') }}">
+    <!-- End datatable style -->
 </head>
 
 <body>
@@ -78,8 +82,16 @@
     <!-- Custom js for this page -->
     <script src="{{ asset('backend/assets/js/dashboard-dark.js') }}"></script>
     <!-- End custom js for this page -->
+    <!-- Datatable script -->
+    <script src="{{ asset('backend/assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('backend/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.js') }}"></script>
+    <script src="{{ asset('backend/assets/js/data-table.js') }}"></script>
+    <!-- End datatable script -->
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="{{ asset('backend/assets/code.js') }}"></script>
 
     <script>
         @if(Session::has('message'))
