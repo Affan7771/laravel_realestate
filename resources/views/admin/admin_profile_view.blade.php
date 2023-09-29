@@ -59,7 +59,7 @@
                 <div class="card-body">
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div>
-                            <img class="wd-100 rounded-circle" src="{{ (!empty($profileData->photo)) ? url('upload/admin_images/' . $profileData->photo) : url('upload/no_image.jpg') }}" alt="profile">
+                            <img class="wd-100 rounded-circle" src="{{ (!empty($profileData->photo)) ? url('upload/admin-images/' . $profileData->photo) : url('upload/no_image.jpg') }}" alt="profile">
                             <span class="h4 ms-3">{{ $profileData->username }}</span>
                         </div>
                     </div>
@@ -160,7 +160,8 @@
 
                             <h6 class="card-title">Update admin profile</h6>
 
-                            <form class="forms-sample">
+                            <form class="forms-sample" method="POST" action="{{ Route('admin.profile.store') }}" enctype="multipart/form-data">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="exampleInputUsername1" class="form-label">Username</label>
                                     <input type="text" name="username" class="form-control"
@@ -191,7 +192,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputUsername1" class="form-label"></label>
-                                    <img id="showImage" class="wd-80 rounded-circle" src="{{ (!empty($profileData->photo)) ? url('upload/admin_images/' . $profileData->photo) : url('upload/no_image.jpg') }}" alt="profile">
+                                    <img id="showImage" class="wd-80 rounded-circle" src="{{ (!empty($profileData->photo)) ? url('upload/admin-images/' . $profileData->photo) : url('upload/no_image.jpg') }}" alt="profile">
                                 </div>
                                 {{-- <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">Password</label>
