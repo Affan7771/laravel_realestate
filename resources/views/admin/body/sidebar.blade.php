@@ -37,6 +37,25 @@
                     </ul>
                 </div>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#aminities" role="button" aria-expanded="false"
+                    aria-controls="emails">
+                    <i class="link-icon" data-feather="mail"></i>
+                    <span class="link-title">Aminities</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="aminities">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ Route('all.amenities') }}" class="nav-link">All Amenities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ Route('add.type') }}" class="nav-link">Add New</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
             {{-- <li class="nav-item">
                 <a href="pages/apps/chat.html" class="nav-link">
                     <i class="link-icon" data-feather="message-square"></i>
@@ -296,25 +315,26 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> --}}
+            <li class="nav-item nav-category">Role & Permission</li>
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#errorPages" role="button"
                     aria-expanded="false" aria-controls="errorPages">
                     <i class="link-icon" data-feather="cloud-off"></i>
-                    <span class="link-title">Error</span>
+                    <span class="link-title">Role & Permission</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
                 <div class="collapse" id="errorPages">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="pages/error/404.html" class="nav-link">404</a>
+                            <a href="{{ Route('all.permission') }}" class="nav-link">All Permission</a>
                         </li>
                         <li class="nav-item">
                             <a href="pages/error/500.html" class="nav-link">500</a>
                         </li>
                     </ul>
                 </div>
-            </li> --}}
+            </li>
             <li class="nav-item nav-category">Docs</li>
             <li class="nav-item">
                 <a href="#" target="_blank" class="nav-link">

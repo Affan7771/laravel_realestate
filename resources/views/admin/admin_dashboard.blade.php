@@ -92,6 +92,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="{{ asset('backend/assets/code.js') }}"></script>
+    <script src="{{ asset('backend/assets/validate.min.js') }}"></script>
 
     <script>
         @if(Session::has('message'))
