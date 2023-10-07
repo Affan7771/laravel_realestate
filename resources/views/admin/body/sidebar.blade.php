@@ -330,7 +330,10 @@
                             <a href="{{ Route('all.permission') }}" class="nav-link">All Permission</a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/error/500.html" class="nav-link">500</a>
+                            <a href="{{ Route('all.roles') }}" class="nav-link">All Roles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ Route('add.roles.permission') }}" class="nav-link">Role in Permission</a>
                         </li>
                     </ul>
                 </div>

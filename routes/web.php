@@ -64,7 +64,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::get('/delete/amenity/{id}', 'DeleteAmenity')->name('delete.amenity');
     });
 
-    // Permission Role Controller
+    // Permission & Role Controller
     Route::controller(RoleController::class)->group(function(){
         Route::get('/all/permission', 'AllPermission')->name('all.permission');
         Route::get('/add/permission', 'AddPermission')->name('add.permission');
@@ -72,6 +72,19 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::get('/edit/permission/{id}', 'EditPermission')->name('edit.permission');
         Route::post('/update/permission', 'UpdatePermission')->name('update.permission');
         Route::get('/delete/permission/{id}', 'DeletePermission')->name('delete.permission');
+        Route::get('/import/permission', 'ImportPermission')->name('import.permission');
+        Route::get('/export', 'Export')->name('export');
+        Route::post('/import', 'Import')->name('import');
+
+        Route::get('/all/roles', 'AllRoles')->name('all.roles');
+        Route::get('/add/role', 'AddRole')->name('add.role');
+        Route::post('/store/role', 'StoreRole')->name('store.role');
+        Route::get('/edit/role/{id}', 'EditRole')->name('edit.role');
+        Route::post('/update/role', 'UpdateRole')->name('update.role');
+        Route::get('/delete/role/{id}', 'DeleteRole')->name('delete.role');
+
+        Route::get('/add/roles/permission', 'AllRolesPermission')->name('add.roles.permission');
+        Route::post('/roles/permission/store', 'rolesPermissionStore')->name('role.permission.store');
     });
 });
 
